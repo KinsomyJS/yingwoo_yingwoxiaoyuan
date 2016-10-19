@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/post_main"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:navigationIcon="@mipmap/screen"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@mipmap/screen"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="南京工业大学"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.yingwoo.yingwoxiaoyuan.View.AutoLoadRecyclerView
+        android:id="@+id/recycleview"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar"></com.yingwoo.yingwoxiaoyuan.View.AutoLoadRecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/tabview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7.5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:background="@mipmap/nanvbars"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_action_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/home" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_action_find"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/find" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/action_add"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1.8"
+                android:background="@mipmap/add" />
+
+            <LinearLayout
+                android:id="@+id/layout_action_bub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_bub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/bub" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_action_head"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/head" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/app_toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:background="@mipmap/label"
+        android:gravity="clip_vertical">
+
+        <com.yingwoo.yingwoxiaoyuan.View.ClearEditText
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:id="@+id/tv_nick"
+            android:layout_width="match_parent"
+            android:background="@mipmap/serchfield"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="请输入个性签名"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:textColorHint="@color/textcolor4"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

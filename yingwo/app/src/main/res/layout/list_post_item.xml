@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/post_item_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/post_content_bg"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_userhead"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                fresco:placeholderImage="@mipmap/touxiang"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@id/iv_userhead"
+                android:text="kinsomy"
+                android:textColor="@color/textcolor1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_louzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@id/tv_userName"
+                android:background="@mipmap/louzhubiaoqian"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_louceng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_userName"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/iv_userhead"
+                android:text="第1楼"
+                android:textColor="@color/textcolor3"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_releasetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_louceng"
+                android:layout_alignBottom="@+id/tv_louceng"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/tv_louceng"
+                android:text="21小时之前"
+                android:textColor="@color/textcolor3"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/ib_Command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/more_gray" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_title"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="我们知道section指的是索引条上选中字母的索引，我们假设这个字母是N；那secion-1就代表的是section所对应的字母在索引条上的前一个字母，如果section对应的是N的话，那section-1所对应的就是字母M;
+    这段话的思想其实就是，我们一般而言是要将二分查找的start位置定为0，但如果尽量往后的话那查找起来会更快些。所以，既然在map中没有section字符所对应item的索引，但如果能找到它前一个字母所对应索引的话，我们就不必从头开始找了，直接从它上一个字母所对应的item位置往后找即可。"
+                android:textColor="@color/textcolor"
+                android:textSize="15sp"
+                android:visibility="gone"></TextView>
+
+            <ListView
+                android:id="@+id/ImageList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:visibility="gone"></ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_layout">
+
+                <LinearLayout
+                    android:id="@+id/post_like2command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/heart_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_likenum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="29"
+                            android:textColor="@color/textcolor2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/post_reply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/bub_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_commentnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="18"
+                            android:textColor="@color/textcolor2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reply_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/post_like2command"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/background"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/post_reply_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

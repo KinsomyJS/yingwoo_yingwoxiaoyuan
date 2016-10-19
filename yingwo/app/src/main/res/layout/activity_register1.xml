@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center_horizontal"
+    android:orientation="vertical" android:background="@color/background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="62dp">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/logo01"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="40dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@mipmap/input_textfield"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:text="手机号"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/grey_900"/>
+
+                    <EditText
+                        android:id="@+id/edit_phone"
+                        android:layout_marginLeft="25dp"
+                        android:hint="请输入手机号"
+                        android:textSize="15sp"
+                        android:background="@mipmap/input_textfield"
+                        android:layout_marginRight="15dp"
+                        android:inputType="phone"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_agree"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/grey_900"
+                        android:text="我已阅读并同意"/>
+                    <TextView
+                        android:id="@+id/tv_article"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/app_primary"
+                        android:gravity="center_vertical"
+                        android:text="《应我校园使用条款》"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_next_step"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/button_greencorner_selector"
+                    android:text="@string/next_step" />
+
+                <TextView
+                    android:id="@+id/tv_haveaccount"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="已有账号 直接登录"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+</LinearLayout>

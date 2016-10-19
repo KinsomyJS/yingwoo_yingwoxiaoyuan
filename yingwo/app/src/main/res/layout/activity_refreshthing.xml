@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/layout_toolbar" layout="@layout/app_toolbar"></include>
+
+    <com.rockerhieu.emojicon.EmojiconEditText
+        android:id="@+id/edit_content"
+        android:layout_below="@id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/shurukuang"
+        android:padding="15dp"
+        android:gravity="top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="分享身边有料、有趣、有用的校园新鲜事~"
+        android:textSize="15sp"
+        android:textColor="@color/textcolor1"/>
+
+    <cn.finalteam.galleryfinal.widget.HorizontalListView
+        android:id="@+id/lv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:fadingEdge="none"
+        android:horizontalSpacing="2dp"
+        android:numColumns="3"
+        android:verticalSpacing="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/edit_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/block_keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_toolview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/btn_emoj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/emoji"/>
+
+            <ImageView
+                android:id="@+id/btn_choosepic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/picture_gray" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/emojicons"
+            android:layout_below="@id/block_keyboardview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

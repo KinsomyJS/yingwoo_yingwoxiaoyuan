@@ -1,0 +1,148 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionbar" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryDark">@color/app_primary_dark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryDark">@color/app_primary_dark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="AppTheme.TranslucentStatus" parent="Theme.AppCompat.Light">
+        <!-- Status Bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Navigation Bar -->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="Theme" parent="AppTheme.NoActionbar">
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--  控制popuWindow显示和隐藏 -->
+    <!--  这个是加入的代码 -->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophiden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="homepopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/homeshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/homehiden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <!-- 绿色按钮，带圆角 -->
+    <style name="GreenWithCorner" >
+        <item name="android:background">@drawable/button_greencorner_selector</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AnimHead" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/picin_anim</item>
+        <item name="android:windowExitAnimation">@anim/picout_anim</item>
+    </style>
+    <style name="ImageScale" parent="android:Theme.Black.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimHead</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置全屏显示 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="ImageloadingDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item><!--无边框-->
+        <item name="android:windowNoTitle">true</item><!--没有标题-->
+        <item name="android:windowIsFloating">true</item><!--是否浮在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--背景是否半透明-->
+        <item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item><!--动画样式-->
+        <item name="android:backgroundDimEnabled">true</item><!--背景是否模糊-->
+    </style>
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="BannerDefaultStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <!-- 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 -->
+        <!-- 开启自动轮播 -->
+        <item name="banner_pointAutoPlayAble">true</item>
+        <!-- 自动轮播的时间间隔 -->
+        <item name="banner_pointAutoPlayInterval">4000</item>
+        <!-- 指示点容器背景 -->
+        <item name="banner_pointContainerBackground">@color/transprant</item>
+        <!-- 指示点背景 -->
+        <item name="banner_pointDrawable">@drawable/bga_banner_selector_point_hollow</item>
+        <!-- 指示点容器左右内间距 -->
+        <item name="banner_pointContainerLeftRightPadding">10dp</item>
+        <!-- 指示点上下外间距 -->
+        <item name="banner_pointTopBottomMargin">6dp</item>
+        <!-- 指示点左右外间距 -->
+        <item name="banner_pointLeftRightMargin">3dp</item>
+        <!-- 指示器的位置 -->
+        <item name="banner_indicatorGravity">bottom|center_horizontal</item>
+        <!-- 页码切换过程的时间长度 -->
+        <item name="banner_pageChangeDuration">800</item>
+        <!-- 提示文案的文字大小 -->
+        <item name="banner_tipTextSize">10sp</item>
+        <!-- 提示文案的文字颜色 -->
+        <item name="banner_tipTextColor">@android:color/white</item>
+        <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
+        <item name="banner_placeholderDrawable">@drawable/holder</item>
+    </style>
+
+    <style name="ansenTextTitleAppearance" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

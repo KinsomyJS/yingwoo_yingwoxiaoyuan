@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yingwoo.yingwoxiaoyuan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.yingwoo.yingwoxiaoyuan.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.LoginActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.MyTopicActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.MainActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.RegisterActivity2"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.RegisterActivity1"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.ResetPasswdActivity1"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.ResetPasswdActivity2"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.MakeupinfoActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.SettingsActivity"
+            android:theme="@style/Theme"></activity>
+
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.PersonCenterActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.HomePageActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.RefreshThingActivity"
+            android:theme="@style/Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.PostBuildingActivity"
+            android:theme="@style/Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.PostActivity"
+            android:theme="@style/Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.FirstActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.SchoolSelectActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.AcademySelectActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.SecondActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.clip.ClipHeaderActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.SignatureActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.View.ImageShower"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.PhotoPreviewActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.ChangeNickNameActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.FindActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.TopicActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.SubjectHomeActivity"
+            android:theme="@style/Theme"></activity>
+
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.PhotoViewActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+        android:name="com.yingwoo.yingwoxiaoyuan.ChangeinfoActivity"
+        android:theme="@style/Theme"></activity>
+
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.AboutUsActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.ProtocolActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.UserProtocolActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.MyPostActivity"
+            android:theme="@style/Theme"></activity>
+        <activity
+            android:name="com.yingwoo.yingwoxiaoyuan.WebviewActivity"
+            android:theme="@style/Theme"></activity>
+        
+
+    </application>
+
+</manifest>

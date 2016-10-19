@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/post_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:navigationIcon="@mipmap/nva_con"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@mipmap/nva_con"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="title"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.yingwoo.yingwoxiaoyuan.View.AutoLoadRecyclerView
+        android:id="@+id/rv_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+    <TextView
+        android:id="@+id/tv_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="-End-"
+        android:textColor="@color/textcolor2"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/post_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/command_item"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="7"
+            android:background="@mipmap/pinglunkuang_1"
+            android:onClick="buildItem"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/textcolor2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:text="个评论"
+                android:textColor="@color/textcolor2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/like_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/textcolor2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="个赞"
+                android:textColor="@color/textcolor2"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@mipmap/heart_gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/block_keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/layout_toolview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="9dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="9dp">
+
+            <ImageView
+                android:id="@+id/btn_emoj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/emoji" />
+
+            <EditText
+                android:id="@+id/tv_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/btn_emoj"
+                android:layout_toStartOf="@+id/btn_send"
+                android:background="@drawable/input_bg"
+                android:hint="回复内容"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="3dp"
+                android:paddingTop="5dp"
+                android:scrollHorizontally="false"
+                android:singleLine="false" />
+
+            <TextView
+                android:id="@+id/btn_send"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_input"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/post_send_button_selector"
+                android:text="发送"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/emojicons"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/block_keyboardview" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="发现"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <!--<com.yingwoo.yingwoxiaoyuaningwoxiaoyuan.com.yingwoo.com.yingwoo.yingwoxiaoyuan.View.SwitchButton-->
+            <!--android:id="@+id/switchbutton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center" />-->
+        </android.support.v7.widget.Toolbar>
+
+        <cn.bingoogolapple.bgabanner.BGABanner
+            android:id="@+id/banner_main_accordion"
+            style="@style/BannerDefaultStyle"
+            android:layout_below="@+id/toolbar"
+            app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+            app:banner_transitionEffect="accordion" />
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@color/app_primary"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="@color/app_primary"
+        app:tabTextAppearance="@style/TabLayoutTextAppearance"
+        app:tabTextColor="@color/textcolor2" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout
+        android:id="@+id/tabview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7.5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:background="@mipmap/nanvbars"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_action_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/home" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_action_find"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/find" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/action_add"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1.8"
+                android:background="@mipmap/add" />
+
+            <LinearLayout
+                android:id="@+id/layout_action_bub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_bub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/bub" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_action_head"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/action_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/head" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

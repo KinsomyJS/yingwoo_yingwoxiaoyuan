@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/command_popup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/popup_bg"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/action_btn"
+                android:text="操作"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="12sp"
+                android:textColor="@color/textcolor1"
+                android:background="@color/transprant"/>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background"></View>
+            <Button
+                android:id="@+id/copy_btn"
+                android:text="复制"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:background="@color/transprant"                />
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background"></View>
+            <Button
+                android:id="@+id/report_btn"
+                android:text="举报"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:background="@color/transprant"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/popup_bg"
+            android:text="取消"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

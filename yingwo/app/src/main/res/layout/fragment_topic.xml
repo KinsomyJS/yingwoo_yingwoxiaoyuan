@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionbar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textcolor2"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:id="@+id/topic_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#88323232"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:id="@+id/topic_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/face_img"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@color/textcolor3" />
+
+                    <TextView
+                        android:id="@+id/topic_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="南工单身日常"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tiezi_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="115"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="帖子"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:id="@+id/guanzhu_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="234"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关注"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/ib_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/tianjia" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:navigationIcon="@mipmap/nva_con"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@mipmap/nva_con"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white"
+            app:tabIndicatorColor="@color/app_primary"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/app_primary"
+            app:tabTextAppearance="@style/TabLayoutTextAppearance"
+            app:tabTextColor="@color/textcolor2" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"
+        android:src="@drawable/fab_selector"
+        fab:fab_type="normal" />
+
+</android.support.design.widget.CoordinatorLayout>
+
