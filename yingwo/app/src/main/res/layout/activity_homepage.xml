@@ -13,9 +13,9 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
-        android:navigationIcon="@mipmap/screen"
+        android:navigationIcon="@color/transprant"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:navigationIcon="@mipmap/screen"
+        app:navigationIcon="@color/transprant"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <TextView
