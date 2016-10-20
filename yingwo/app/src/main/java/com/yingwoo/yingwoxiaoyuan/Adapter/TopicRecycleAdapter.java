@@ -84,7 +84,7 @@ public class TopicRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         if (holder instanceof MyViewHolder) {
             final PostModel.InfoBean topicModel = topicModelList.get(position);
             holder.itemView.setOnClickListener(this);
-            ((TopicRecycleAdapter.MyViewHolder) holder).tv_content.setOnClickListener(new View.OnClickListener() {
+            ((MyViewHolder) holder).tv_content.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, PostActivity.class);
@@ -128,7 +128,7 @@ public class TopicRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                         }
                     });
                 } else {
-                    ((TopicRecycleAdapter.MyViewHolder) holder).singleImg.setVisibility(View.GONE);
+                    ((MyViewHolder) holder).singleImg.setVisibility(View.GONE);
                     List<String> imgurls = new ArrayList<>();
                     final List<String> bigimgurls = new ArrayList<>();
                     for (int i = 0; i < urls.length; i++) {
@@ -138,8 +138,8 @@ public class TopicRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                             imgurls.add(urls[i] + "?imageMogr2/auto-orient/thumbnail/!40p");
                         }
                     }
-                    ((TopicRecycleAdapter.MyViewHolder) holder).gridView.setVisibility(View.VISIBLE);
-                    ((TopicRecycleAdapter.MyViewHolder) holder).gridView.setPhotoAdapter(topicFragment.getActivity(),imgurls);
+                    ((MyViewHolder) holder).gridView.setVisibility(View.VISIBLE);
+                    ((MyViewHolder) holder).gridView.setPhotoAdapter(topicFragment.getActivity(),imgurls);
 
                 }
             } else if (!topicModel.getImg().contains("http")) {
@@ -311,6 +311,7 @@ public class TopicRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     break;
                 case R.id.report_btn:
                     Toast.makeText(context, "这是举报按钮", Toast.LENGTH_SHORT).show();
+                    topicFragment.cancelPop();
                     break;
                 case R.id.comfirm_btn:
                     deletePost(Integer.parseInt(topicModelList.get(getPosition()).getId()));

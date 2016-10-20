@@ -198,7 +198,7 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_search) {
-
+            Toast.makeText(HomePageActivity.this,"正在开发中~",Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);

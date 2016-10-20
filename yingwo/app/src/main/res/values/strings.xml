@@ -72,6 +72,7 @@
 </string>
     <string name="aboutus_version">应我校园 V0.8.1</string>
     <string name="copyright">Copyright © 2016-2017 应我校园 All rights reservered</string>
+    <string name="school_name">南京工业大学</string>
 
     <string-array name="colors">
         <item>red</item>

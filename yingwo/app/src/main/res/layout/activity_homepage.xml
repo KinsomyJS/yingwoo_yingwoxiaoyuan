@@ -13,9 +13,9 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
-        android:navigationIcon="@color/transprant"
+        android:navigationIcon="@mipmap/screen"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:navigationIcon="@color/transprant"
+        app:navigationIcon="@mipmap/screen"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:fontFamily="sans-serif"
-            android:text="南京工业大学"
+            android:text="@string/school_name"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>

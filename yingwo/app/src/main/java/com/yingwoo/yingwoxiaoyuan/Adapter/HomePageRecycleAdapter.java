@@ -328,13 +328,17 @@ public class HomePageRecycleAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                     ClipboardManager cmb = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
                     cmb.setText(topicModelList.get(getPosition()).getContent().trim());
                     if (context instanceof HomePageActivity)
-                        ((HomePageActivity) context).showPop();
+                        ((HomePageActivity) context).cancelPop();
                     else
-                        ((MyPostActivity) context).showPop();
+                        ((MyPostActivity) context).cancelPop();
 
                     break;
                 case R.id.report_btn:
                     Toast.makeText(context, "这是举报按钮", Toast.LENGTH_SHORT).show();
+                    if (context instanceof HomePageActivity)
+                        ((HomePageActivity) context).cancelPop();
+                    else
+                        ((MyPostActivity) context).cancelPop();
                     break;
                 case R.id.comfirm_btn:
                     deletePost(Integer.parseInt(topicModelList.get(getPosition()).getId()));
@@ -371,9 +375,9 @@ public class HomePageRecycleAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                                 message.sendToTarget();
                             } else {
                                 if (context instanceof HomePageActivity)
-                                    ((HomePageActivity) context).showPop();
+                                    ((HomePageActivity) context).cancelConfirmPop();
                                 else
-                                    ((MyPostActivity) context).showPop();
+                                    ((MyPostActivity) context).cancelConfirmPop();
                                 Toast.makeText(context, "您没有权限做此操作", Toast.LENGTH_SHORT).show();
                             }
                         }

@@ -53,7 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:text="我们知道section指的是索引条上选中字母的索引，我们假设这个字母是N；"
+            android:maxLines="4"
+            android:text=""
             android:textColor="@color/textcolor"
             android:textSize="15sp"
             android:visibility="gone" />

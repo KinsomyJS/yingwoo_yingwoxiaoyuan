@@ -2,6 +2,7 @@ package com.yingwoo.yingwoxiaoyuan.PopUpWindow;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -33,6 +34,21 @@ public class Home_PopUp extends PopupWindow {
         attention_btn.setOnClickListener(itemsOnClick);
         friend_btn.setOnClickListener(itemsOnClick);
         this.setOutsideTouchable(true);
+        mMenuView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                float Right = mMenuView.findViewById(R.id.layout_selector).getRight();
+                float bottom = mMenuView.findViewById(R.id.layout_selector).getBottom();
+                float y = event.getY();
+                float x = event.getX();
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (y > bottom || x > Right) {
+                        dismiss();
+                    }
+                }
+                return true;
+            }
+        });
         this.setContentView(mMenuView);
         this.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         this.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
